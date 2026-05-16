@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café d'Antan — Coffee Shop, Matcha Bar & Torréfacteur Paris 2</title>
+  <meta name="description" content="Café d'Antan, coffee shop premium au cœur de Paris 2. Matcha bar, café de spécialité torréfié sur place, offre B2B. 36 rue de la Lune, 75002 Paris.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ═══════════════════════════════════════
+       DESIGN SYSTEM — Botanique Futuriste
+    ═══════════════════════════════════════ */
+    :root {
+      --bg:          #080F0A;   /* nuit forêt */
+      --bg-2:        #0D1A10;   /* fond section */
+      --bg-3:        #111F14;   /* fond card */
+      --green:       #22C55E;   /* vert tropical vif */
+      --green-d:     #16A34A;   /* vert profond */
+      --green-glow:  rgba(34,197,94,0.15);
+      --orange:      #FB923C;   /* fruit tropical */
+      --orange-d:    #EA6B10;
+      --orange-glow: rgba(251,146,60,0.15);
+      --yellow:      #F59E0B;   /* soleil brésilien */
+      --rose:        #F472B6;   /* fleur tropicale */
+      --rose-glow:   rgba(244,114,182,0.12);
+      --cream:       #FEF3E2;   /* crème chaude */
+      --text:        #E8F5E9;   /* texte principal */
+      --text-muted:  #6B8F72;   /* texte secondaire */
+      --border:      rgba(34,197,94,0.18);
+      --ff-display:  'Fraunces', Georgia, serif;
+      --ff-body:     'DM Sans', system-ui, sans-serif;
+      --max-w:       1280px;
+      --pad-x:       6%;
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--ff-body);
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ── UTILITAIRES ── */
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad-x); }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 1.25rem;
+    }
+    .tag::before { content:''; display:inline-block; width:20px; height:1px; background:var(--green); }
+
+    h2.display {
+      font-family: var(--ff-display);
+      font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+    h2.display em { font-style: italic; }
+    .grad-text {
+      background: linear-gradient(135deg, var(--orange) 0%, var(--yellow) 50%, var(--green) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .muted { color: var(--text-muted); font-weight: 300; line-height: 1.8; }
+
+    /* ── BOUTONS ── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      padding: 0.85rem 2rem;
+      font-family: var(--ff-body);
+      font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      transition: all 0.3s ease; cursor: pointer; border: none;
+    }
+    .btn-green {
+      background: var(--green); color: var(--bg);
+      box-shadow: 0 0 24px rgba(34,197,94,0.35);
+    }
+    .btn-green:hover { background: #34D399; box-shadow: 0 0 36px rgba(34,197,94,0.5); }
+    .btn-ghost {
+      background: transparent; color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:hover { border-color: var(--green); color: var(--green); }
+    .btn-orange {
+      background: var(--orange); color: var(--bg);
+      box-shadow: 0 0 24px rgba(251,146,60,0.35);
+    }
+    .btn-orange:hover { background: #FDBA74; box-shadow: 0 0 36px rgba(251,146,60,0.5); }
+
+    /* ── CARTE GLASS ── */
+    .glass {
+      background: rgba(13,26,16,0.7);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .glass:hover {
+      border-color: rgba(34,197,94,0.4);
+      box-shadow: 0 0 40px rgba(34,197,94,0.08);
+    }
+
+    /* ══════════════════════════════
+       NAV
+    ══════════════════════════════ */
+    header {
+      position: fixed; top:0; left:0; right:0; z-index:200;
+      background: rgba(8,15,10,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px; max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad-x);
+    }
+    .nav-logo {
+      font-family: var(--ff-display);
+      font-size: 1.35rem; font-weight: 400; letter-spacing: 0.02em;
+    }
+    .nav-logo span { color: var(--green); font-style: italic; }
+    .nav-links { display:flex; gap:2.5rem; list-style:none; }
+    .nav-links a {
+      font-size: 0.72rem; font-weight:500; letter-spacing:0.1em;
+      text-transform: uppercase; color: var(--text-muted); transition: color 0.25s;
+    }
+    .nav-links a:hover { color: var(--green); }
+    .nav-cta {
+      font-size: 0.72rem; font-weight:500; letter-spacing:0.12em; text-transform: uppercase;
+      padding: 0.6rem 1.5rem;
+      background: var(--green); color: var(--bg);
+      box-shadow: 0 0 20px rgba(34,197,94,0.3);
+      transition: all 0.3s;
+    }
+    .nav-cta:hover { background: #34D399; box-shadow: 0 0 30px rgba(34,197,94,0.5); }
+
+    /* ══════════════════════════════
+       HERO
+    ══════════════════════════════ */
+    .hero {
+      min-height: 100svh; position: relative;
+      display: flex; align-items: center;
+      padding: 120px var(--pad-x) 80px;
+      overflow: hidden;
+    }
+
+    /* ── Fond botanique animé ── */
+    .hero-bg {
+      position: absolute; inset:0; z-index:0;
+      background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(34,197,94,0.07) 0%, transparent 60%),
+                  radial-gradient(ellipse 50% 40% at 20% 80%, rgba(251,146,60,0.06) 0%, transparent 50%),
+                  radial-gradient(ellipse 40% 30% at 80% 10%, rgba(244,114,182,0.05) 0%, transparent 40%);
+    }
+
+    /* ── SVG feuilles déco ── */
+    .leaf { position:absolute; pointer-events:none; }
+
+    /* Feuille 1 — grande feuille tropicale en haut à droite */
+    .leaf-1 {
+      top: -60px; right: -40px; width: 480px; opacity: 0.18;
+      animation: float1 8s ease-in-out infinite;
+    }
+    /* Feuille 2 — feuille en bas à gauche */
+    .leaf-2 {
+      bottom: -80px; left: -60px; width: 360px; opacity: 0.12;
+      animation: float2 10s ease-in-out infinite;
+    }
+    /* Feuille 3 — petite fleur */
+    .leaf-3 {
+      top: 30%; right: 8%; width: 120px; opacity: 0.25;
+      animation: float1 6s ease-in-out infinite 2s;
+    }
+    @keyframes float1 {
+      0%,100% { transform: translateY(0) rotate(0deg); }
+      50%      { transform: translateY(-18px) rotate(3deg); }
+    }
+    @keyframes float2 {
+      0%,100% { transform: translateY(0) rotate(0deg); }
+      50%      { transform: translateY(14px) rotate(-2deg); }
+    }
+
+    .hero-content { position:relative; z-index:1; max-width: 680px; }
+
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 0.8rem;
+      background: rgba(34,197,94,0.1);
+      border: 1px solid rgba(34,197,94,0.2);
+      padding: 0.4rem 1rem 0.4rem 0.5rem;
+      font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--green); margin-bottom: 2rem;
+    }
+    .hero-eyebrow-dot { width:6px; height:6px; border-radius:50%; background:var(--green); animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{opacity:1; transform:scale(1);} 50%{opacity:0.5; transform:scale(1.5);} }
+
+    .hero h1 {
+      font-family: var(--ff-display);
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-weight: 300; line-height: 1.05; letter-spacing: -0.02em;
+      margin-bottom: 1.75rem;
+    }
+    .hero h1 .line-2 { font-style: italic; color: var(--orange); }
+    .hero h1 .line-3 {
+      background: linear-gradient(90deg, var(--green) 0%, var(--yellow) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    .hero-desc { font-size: 1rem; font-weight:300; color: var(--text-muted); max-width: 460px; margin-bottom: 2.5rem; line-height: 1.8; }
+
+    .hero-btns { display:flex; gap:1rem; flex-wrap:wrap; margin-bottom: 4rem; }
+
+    .hero-chips { display:flex; gap:0.75rem; flex-wrap:wrap; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.35rem 0.9rem;
+      border: 1px solid var(--border);
+      font-size: 0.72rem; color: var(--text-muted);
+      border-radius: 999px;
+    }
+    .chip-dot { width:5px; height:5px; border-radius:50%; }
+
+    /* ── Image hero flottante ── */
+    .hero-visual {
+      position: absolute; right: 5%; top: 50%; transform: translateY(-50%);
+      z-index: 1; width: 42%; max-width: 520px;
+    }
+    .hero-visual-frame {
+      position: relative;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .hero-visual-frame::before {
+      content:'';
+      position:absolute; inset:0; z-index:2;
+      background: linear-gradient(180deg, transparent 60%, var(--bg) 100%),
+                  linear-gradient(90deg, var(--bg) 0%, transparent 20%);
+    }
+    .hero-visual-frame img { width:100%; height:520px; object-fit:cover; filter:saturate(0.7) brightness(0.85); }
+    .hero-badge {
+      position:absolute; bottom:2rem; left:-2rem; z-index:3;
+      background: var(--orange);
+      padding: 1rem 1.5rem;
+      color: var(--bg);
+    }
+    .hero-badge strong { display:block; font-family:var(--ff-display); font-size:1.6rem; font-weight:400; line-height:1; }
+    .hero-badge span { font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; opacity:0.8; }
+
+    /* ══════════════════════════════
+       RUBAN DÉFILANT
+    ══════════════════════════════ */
+    .ticker {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0; overflow:hidden;
+      background: rgba(34,197,94,0.03);
+    }
+    .ticker-track {
+      display: flex; gap: 3rem; width: max-content;
+      animation: ticker 22s linear infinite;
+    }
+    @keyframes ticker { from{transform:translateX(0);} to{transform:translateX(-50%);} }
+    .ticker-item {
+      display: flex; align-items: center; gap: 0.8rem;
+      font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--text-muted); white-space: nowrap;
+    }
+    .ticker-item .sep { color: var(--green); font-size: 1rem; }
+
+    /* ══════════════════════════════
+       OFFRES
+    ══════════════════════════════ */
+    .offres { padding: 110px var(--pad-x); }
+    .offres-header {
+      display:grid; grid-template-columns: 1fr 1fr;
+      gap: 3rem; align-items:end; margin-bottom: 4rem;
+    }
+    .offres-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5px; background:var(--border); }
+
+    .offre {
+      background: var(--bg-2); padding: 3rem 2.5rem;
+      position:relative; overflow:hidden; transition: background 0.3s;
+    }
+    .offre:hover { background: var(--bg-3); }
+    .offre-glow {
+      position:absolute; top:0; left:0; right:0; height:2px;
+      transition: opacity 0.3s;
+    }
+    .offre:nth-child(1) .offre-glow { background: linear-gradient(90deg, var(--orange), transparent); }
+    .offre:nth-child(2) .offre-glow { background: linear-gradient(90deg, var(--green), transparent); }
+    .offre:nth-child(3) .offre-glow { background: linear-gradient(90deg, var(--rose), transparent); }
+
+    .offre-num { font-family:var(--ff-display); font-size:3.5rem; font-weight:300; opacity:0.06; position:absolute; top:1.5rem; right:1.5rem; line-height:1; }
+    .offre-icon { font-size:2.2rem; margin-bottom:1.5rem; }
+    .offre h3 { font-family:var(--ff-display); font-size:1.7rem; font-weight:400; margin-bottom:0.75rem; }
+    .offre p { font-size:0.9rem; color:var(--text-muted); font-weight:300; line-height:1.75; margin-bottom:2rem; }
+    .offre-link {
+      font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase;
+      color: var(--green); font-weight:500;
+      display:inline-flex; align-items:center; gap:0.5rem; transition: gap 0.3s;
+    }
+    .offre:hover .offre-link { gap:0.9rem; }
+
+    /* ══════════════════════════════
+       BOTANIQUE — Section immersive
+    ══════════════════════════════ */
+    .botaniq {
+      padding: 110px var(--pad-x);
+      background: var(--bg-2);
+      position:relative; overflow:hidden;
+    }
+    .botaniq-bg {
+      position:absolute; inset:0; pointer-events:none;
+      background:
+        radial-gradient(ellipse 60% 70% at 90% 50%, rgba(34,197,94,0.06) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 50% at 10% 30%, rgba(251,146,60,0.05) 0%, transparent 50%);
+    }
+    .botaniq-leaf-bg {
+      position:absolute; right:-100px; top:50%; transform:translateY(-50%);
+      width:500px; opacity:0.06; pointer-events:none;
+    }
+    .botaniq-inner { display:grid; grid-template-columns:1fr 1fr; gap:6rem; align-items:center; position:relative; z-index:1; }
+    .botaniq-imgs { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .botaniq-img-main {
+      grid-column: 1/-1;
+      position:relative;
+    }
+    .botaniq-img-main img { width:100%; height:320px; object-fit:cover; filter:saturate(0.8); }
+    .botaniq-img-main-badge {
+      position:absolute; bottom:1.5rem; right:1.5rem;
+      background: rgba(8,15,10,0.85);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+      padding: 0.75rem 1.25rem;
+      font-size:0.72rem; color:var(--green); letter-spacing:0.1em;
+    }
+    .botaniq-img-sub img { width:100%; height:180px; object-fit:cover; filter:saturate(0.8); }
+
+    .botaniq-origins { display:flex; flex-direction:column; gap:1.25rem; margin-top:2.5rem; }
+    .origin-row {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:1rem 0; border-bottom:1px solid var(--border);
+    }
+    .origin-left { display:flex; align-items:center; gap:1rem; }
+    .origin-flag { font-size:1.4rem; }
+    .origin-name { font-family:var(--ff-display); font-size:1.05rem; font-weight:400; }
+    .origin-region { font-size:0.78rem; color:var(--text-muted); }
+    .origin-notes { font-size:0.72rem; color:var(--orange); letter-spacing:0.05em; }
+    .origin-bar-wrap { display:flex; align-items:center; gap:0.75rem; }
+    .origin-bar { height:2px; width:60px; background:var(--border); position:relative; }
+    .origin-bar-fill { position:absolute; left:0; top:0; height:100%; background:linear-gradient(90deg, var(--green), var(--yellow)); }
+    .origin-score { font-size:0.75rem; color:var(--text-muted); }
+
+    /* ══════════════════════════════
+       MATCHA
+    ══════════════════════════════ */
+    .matcha { padding: 110px var(--pad-x); position:relative; overflow:hidden; }
+    .matcha-bg {
+      position:absolute; inset:0;
+      background: radial-gradient(ellipse 50% 80% at 0% 50%, rgba(34,197,94,0.05) 0%, transparent 60%);
+      pointer-events:none;
+    }
+    .matcha-inner { display:grid; grid-template-columns:1fr 1fr; gap:6rem; align-items:center; position:relative; z-index:1; }
+    .matcha-visual { position:relative; }
+    .matcha-visual img { width:100%; height:500px; object-fit:cover; filter:saturate(0.75); border:1px solid var(--border); }
+    .matcha-tag-float {
+      position:absolute; top:2rem; left:-2rem;
+      background:var(--green); color:var(--bg);
+      padding:0.6rem 1.2rem;
+      font-size:0.68rem; letter-spacing:0.15em; text-transform:uppercase; font-weight:500;
+    }
+
+    .matcha-cards { display:flex; flex-direction:column; gap:1px; background:var(--border); margin-top:2.5rem; }
+    .matcha-card { background:var(--bg-2); padding:1.5rem 2rem; display:flex; justify-content:space-between; align-items:center; transition:background 0.3s; }
+    .matcha-card:hover { background:var(--bg-3); }
+    .matcha-card-left h4 { font-family:var(--ff-display); font-size:1.15rem; font-weight:400; margin-bottom:0.2rem; }
+    .matcha-card-left p { font-size:0.82rem; color:var(--text-muted); margin:0; }
+    .matcha-card-price { font-family:var(--ff-display); font-size:1.4rem; font-weight:300; color:var(--green); }
+
+    /* ══════════════════════════════
+       B2B
+    ══════════════════════════════ */
+    .b2b { padding:110px var(--pad-x); background:var(--bg-2); }
+    .b2b-inner { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
+    .b2b-cards { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .b2b-card {
+      padding:2rem; background:var(--bg);
+      border:1px solid var(--border);
+      position:relative; overflow:hidden;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .b2b-card:hover { border-color:rgba(251,146,60,0.35); box-shadow:0 0 30px rgba(251,146,60,0.07); }
+    .b2b-card-icon { font-size:1.8rem; margin-bottom:1rem; }
+    .b2b-card h4 { font-family:var(--ff-display); font-size:1.15rem; font-weight:400; margin-bottom:0.5rem; }
+    .b2b-card p { font-size:0.85rem; color:var(--text-muted); font-weight:300; line-height:1.65; margin:0; }
+    .b2b-card-featured {
+      grid-column:1/-1; background:var(--orange);
+      border-color:var(--orange);
+      color:var(--bg);
+    }
+    .b2b-card-featured h4 { color:var(--bg); font-size:1.3rem; }
+    .b2b-card-featured p { color:rgba(8,15,10,0.7); }
+
+    /* ══════════════════════════════
+       AVIS
+    ══════════════════════════════ */
+    .avis { padding:110px var(--pad-x); }
+    .avis-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:4rem; }
+    .avis-score { text-align:right; }
+    .avis-score-num { font-family:var(--ff-display); font-size:4rem; font-weight:300; color:var(--green); line-height:1; }
+    .avis-score-label { font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); }
+    .avis-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5px; background:var(--border); }
+    .avis-card { background:var(--bg-2); padding:2.5rem; position:relative; }
+    .avis-card-quote {
+      position:absolute; top:1.5rem; right:2rem;
+      font-family:var(--ff-display); font-size:5rem; font-weight:300;
+      color:rgba(34,197,94,0.08); line-height:1;
+    }
+    .avis-stars { color:var(--yellow); font-size:0.85rem; letter-spacing:0.1em; margin-bottom:1.25rem; }
+    .avis-text {
+      font-family:var(--ff-display); font-style:italic;
+      font-size:1.05rem; line-height:1.65; color:var(--text); margin-bottom:2rem;
+    }
+    .avis-author { font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); }
+
+    /* ══════════════════════════════
+       LOCALISATION
+    ══════════════════════════════ */
+    .loc { display:grid; grid-template-columns:1fr 1fr; }
+    .loc-map { height:500px; position:relative; overflow:hidden; }
+    .loc-map iframe { width:100%; height:100%; border:none; filter:grayscale(80%) invert(10%) contrast(1.1); }
+    .loc-map::after {
+      content:''; position:absolute; inset:0; pointer-events:none;
+      background: linear-gradient(90deg, var(--bg-2) 0%, transparent 30%);
+    }
+    .loc-info {
+      background:var(--bg-2); padding:5rem;
+      display:flex; flex-direction:column; justify-content:center;
+      border-left:1px solid var(--border);
+    }
+    .loc-row { padding:1.25rem 0; border-bottom:1px solid var(--border); display:flex; flex-direction:column; gap:0.3rem; }
+    .loc-row:first-of-type { border-top:1px solid var(--border); }
+    .loc-row-key { font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--green); }
+    .loc-row-val { font-size:0.92rem; font-weight:300; color:var(--text); line-height:1.6; }
+
+    /* ══════════════════════════════
+       FOOTER
+    ══════════════════════════════ */
+    footer {
+      background:var(--bg-2);
+      border-top:1px solid var(--border);
+      padding:5rem var(--pad-x) 2.5rem;
+    }
+    .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:4rem; padding-bottom:4rem; border-bottom:1px solid var(--border); margin-bottom:2.5rem; }
+    .footer-logo { font-family:var(--ff-display); font-size:1.8rem; font-weight:400; margin-bottom:1rem; }
+    .footer-logo span { color:var(--green); font-style:italic; }
+    .footer-desc { font-size:0.88rem; color:var(--text-muted); font-weight:300; line-height:1.75; max-width:280px; }
+    .footer-addr { margin-top:1.5rem; font-size:0.82rem; color:rgba(232,245,233,0.4); line-height:1.8; font-style:normal; }
+    .footer-addr a { color:var(--orange); }
+    .footer-col h4 { font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--green); margin-bottom:1.5rem; }
+    .footer-col ul { list-style:none; }
+    .footer-col ul li { margin-bottom:0.75rem; }
+    .footer-col ul li a { font-size:0.85rem; color:rgba(232,245,233,0.4); transition:color 0.25s; }
+    .footer-col ul li a:hover { color:var(--text); }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; font-size:0.75rem; color:rgba(232,245,233,0.2); }
+    .footer-bottom a { color:inherit; }
+    .footer-bottom a:hover { color:var(--text-muted); }
+
+    /* ══════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════ */
+    @media (max-width:1024px) {
+      .hero-visual { display:none; }
+      .hero h1 { font-size:3.2rem; }
+      .offres-grid { grid-template-columns:1fr; }
+      .offres-header { grid-template-columns:1fr; }
+      .botaniq-inner, .matcha-inner, .b2b-inner { grid-template-columns:1fr; gap:3rem; }
+      .avis-grid { grid-template-columns:1fr; }
+      .loc { grid-template-columns:1fr; }
+      .loc-map { height:300px; }
+      .footer-grid { grid-template-columns:1fr 1fr; gap:2.5rem; }
+    }
+    @media (max-width:768px) {
+      :root { --pad-x:5%; }
+      .nav-links { display:none; }
+      .botaniq-imgs { grid-template-columns:1fr; }
+      .botaniq-img-main { grid-column:auto; }
+      .b2b-cards { grid-template-columns:1fr; }
+      .b2b-card-featured { grid-column:auto; }
+      .footer-grid { grid-template-columns:1fr; }
+      .avis-header, .offres-header { flex-direction:column; align-items:flex-start; gap:1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAV ═══ -->
+  <header>
+    <nav>
+      <a href="/" class="nav-logo">Café <span>d'Antan</span></a>
+      <ul class="nav-links">
+        <li><a href="/menu/">Carte</a></li>
+        <li><a href="/matcha-bar-paris/">Matcha</a></li>
+        <li><a href="/torrefacteur-paris/">Torréfaction</a></li>
+        <li><a href="/cafe-professionnel-paris/">Professionnels</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <a href="/reservation/" class="nav-cta">Réserver</a>
+    </nav>
+  </header>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+
+    <!-- Feuilles SVG décoratives -->
+    <svg class="leaf leaf-1" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M200 10 C350 80, 420 250, 300 400 C250 460, 150 480, 80 420 C-20 340, 10 150, 100 60 C130 30, 165 5, 200 10Z" fill="#22C55E"/>
+      <path d="M200 10 L200 450" stroke="#16A34A" stroke-width="3" opacity="0.5"/>
+      <path d="M200 100 C270 120, 320 180, 290 250" stroke="#16A34A" stroke-width="1.5" opacity="0.4"/>
+      <path d="M200 150 C260 165, 300 220, 275 285" stroke="#16A34A" stroke-width="1.5" opacity="0.3"/>
+      <path d="M200 200 C250 210, 280 255, 260 310" stroke="#16A34A" stroke-width="1.5" opacity="0.3"/>
+      <path d="M200 100 C130 120, 80 180, 110 250" stroke="#16A34A" stroke-width="1.5" opacity="0.4"/>
+      <path d="M200 180 C140 195, 100 240, 125 300" stroke="#16A34A" stroke-width="1.5" opacity="0.3"/>
+    </svg>
+
+    <svg class="leaf leaf-2" viewBox="0 0 340 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M170 15 C300 70, 360 220, 250 380 C200 440, 100 455, 50 390 C-30 300, 20 120, 90 50 C115 25, 145 8, 170 15Z" fill="#FB923C"/>
+      <path d="M170 15 L170 420" stroke="#EA6B10" stroke-width="2.5" opacity="0.4"/>
+      <path d="M170 90 C240 105, 280 160, 255 225" stroke="#EA6B10" stroke-width="1.5" opacity="0.35"/>
+      <path d="M170 160 C230 172, 265 220, 240 278" stroke="#EA6B10" stroke-width="1.5" opacity="0.3"/>
+    </svg>
+
+    <!-- Petite fleur -->
+    <svg class="leaf leaf-3" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="60" cy="60" r="12" fill="#F472B6"/>
+      <ellipse cx="60" cy="28" rx="10" ry="22" fill="#F472B6" opacity="0.7"/>
+      <ellipse cx="60" cy="92" rx="10" ry="22" fill="#F472B6" opacity="0.7" transform="rotate(180 60 60)"/>
+      <ellipse cx="28" cy="60" rx="22" ry="10" fill="#F472B6" opacity="0.7"/>
+      <ellipse cx="92" cy="60" rx="22" ry="10" fill="#F472B6" opacity="0.7"/>
+      <ellipse cx="38" cy="38" rx="10" ry="20" fill="#F472B6" opacity="0.5" transform="rotate(45 38 38)"/>
+      <ellipse cx="82" cy="38" rx="10" ry="20" fill="#F472B6" opacity="0.5" transform="rotate(-45 82 38)"/>
+      <ellipse cx="38" cy="82" rx="10" ry="20" fill="#F472B6" opacity="0.5" transform="rotate(-45 38 82)"/>
+      <ellipse cx="82" cy="82" rx="10" ry="20" fill="#F472B6" opacity="0.5" transform="rotate(45 82 82)"/>
+    </svg>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-dot"></span>
+        Coffee Shop · Paris 2e · Bonne Nouvelle
+      </div>
+
+      <h1>
+        Café<br>
+        <span class="line-2">d'Antan</span><br>
+        <span class="line-3">Paris</span>
+      </h1>
+
+      <p class="hero-desc">
+        Coffee shop, matcha bar & torréfacteur artisanal au cœur du 2e arrondissement. Cafés de spécialité, matchas japonais, pâtisseries maison.
+      </p>
+
+      <div class="hero-btns">
+        <a href="/menu/" class="btn btn-green">Notre carte →</a>
+        <a href="/contact/" class="btn btn-ghost">Nous trouver</a>
+      </div>
+
+      <div class="hero-chips">
+        <span class="chip"><span class="chip-dot" style="background:var(--green)"></span>Café de spécialité</span>
+        <span class="chip"><span class="chip-dot" style="background:#86efac"></span>Matcha japonais</span>
+        <span class="chip"><span class="chip-dot" style="background:var(--orange)"></span>Torréfacteur Paris</span>
+        <span class="chip"><span class="chip-dot" style="background:var(--rose)"></span>B2B</span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-visual-frame">
+        <img
+          src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80"
+          alt="Café d'Antan coffee shop Paris 2 intérieur"
+          width="520" height="520"
+          fetchpriority="high"
+        >
+      </div>
+      <div class="hero-badge">
+        <strong>Paris</strong>
+        <span>2e arrondissement</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TICKER ═══ -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <!-- dupliqué pour l'effet infini -->
+      <span class="ticker-item">☕ Café de Spécialité <span class="sep">✦</span></span>
+      <span class="ticker-item">🍵 Matcha Cérémonial Japon <span class="sep">✦</span></span>
+      <span class="ticker-item">🌿 Torréfacteur Artisanal Paris <span class="sep">✦</span></span>
+      <span class="ticker-item">🇧🇷 Single Origin Brésil <span class="sep">✦</span></span>
+      <span class="ticker-item">🌸 Fleurs & Plantes <span class="sep">✦</span></span>
+      <span class="ticker-item">🏢 Offre B2B Restaurants & Hôtels <span class="sep">✦</span></span>
+      <span class="ticker-item">📍 36 rue de la Lune, 75002 Paris <span class="sep">✦</span></span>
+      <span class="ticker-item">☕ Café de Spécialité <span class="sep">✦</span></span>
+      <span class="ticker-item">🍵 Matcha Cérémonial Japon <span class="sep">✦</span></span>
+      <span class="ticker-item">🌿 Torréfacteur Artisanal Paris <span class="sep">✦</span></span>
+      <span class="ticker-item">🇧🇷 Single Origin Brésil <span class="sep">✦</span></span>
+      <span class="ticker-item">🌸 Fleurs & Plantes <span class="sep">✦</span></span>
+      <span class="ticker-item">🏢 Offre B2B Restaurants & Hôtels <span class="sep">✦</span></span>
+      <span class="ticker-item">📍 36 rue de la Lune, 75002 Paris <span class="sep">✦</span></span>
+    </div>
+  </div>
+
+  <!-- ═══ OFFRES ═══ -->
+  <section class="offres">
+    <div class="container">
+      <div class="offres-header">
+        <div>
+          <span class="tag">Nos univers</span>
+          <h2 class="display">Trois expertises,<br><em>un seul espace</em></h2>
+        </div>
+        <div>
+          <p class="muted" style="max-width:320px;">Un coffee shop qui refuse les compromis — sur la qualité du café, du matcha, et de l'expérience.</p>
+          <a href="/menu/" class="btn btn-ghost" style="margin-top:1.5rem;">Voir la carte →</a>
+        </div>
+      </div>
+      <div class="offres-grid">
+        <div class="offre">
+          <div class="offre-glow"></div>
+          <span class="offre-num">01</span>
+          <div class="offre-icon">☕</div>
+          <h3>Café de Spécialité</h3>
+          <p>Origines sélectionnées à travers le monde, torréfiées artisanalement à Paris. Score SCA > 85/100. Espresso, V60, Cold Brew, Chemex.</p>
+          <a href="/cafe-de-specialite-paris/" class="offre-link">Découvrir →</a>
+        </div>
+        <div class="offre">
+          <div class="offre-glow"></div>
+          <span class="offre-num">02</span>
+          <div class="offre-icon">🍵</div>
+          <h3>Matcha Bar</h3>
+          <p>Matcha de grade cérémonial importé du Japon. Préparé à la façon traditionnelle. Matcha latte, glacé, pur en bol.</p>
+          <a href="/matcha-bar-paris/" class="offre-link">Découvrir →</a>
+        </div>
+        <div class="offre">
+          <div class="offre-glow"></div>
+          <span class="offre-num">03</span>
+          <div class="offre-icon">🔥</div>
+          <h3>Torréfaction</h3>
+          <p>Torréfacteur indépendant. Achetez nos cafés en grain : 250g, 500g, 1kg. Mouture sur demande. Expédition France entière.</p>
+          <a href="/torrefacteur-paris/" class="offre-link">Découvrir →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ BOTANIQUE / ORIGINES ═══ -->
+  <section class="botaniq">
+    <div class="botaniq-bg"></div>
+    <svg class="botaniq-leaf-bg" viewBox="0 0 400 500" fill="none">
+      <path d="M200 10 C350 80, 420 250, 300 400 C250 460, 150 480, 80 420 C-20 340, 10 150, 100 60 C130 30, 165 5, 200 10Z" fill="#22C55E"/>
+    </svg>
+    <div class="container botaniq-inner">
+      <div>
+        <span class="tag">Nos origines</span>
+        <h2 class="display">Du Brésil au Japon,<br><em>l'excellence à chaque tasse</em></h2>
+        <p class="muted" style="margin:1.5rem 0 2rem;">Nous sélectionnons nos cafés directement auprès des producteurs, lors de voyages annuels sur les terroirs. Chaque lot est évalué selon les standards SCA avant d'être torréfié à Paris.</p>
+        <div class="botaniq-origins">
+          <div class="origin-row">
+            <div class="origin-left">
+              <span class="origin-flag">🇧🇷</span>
+              <div>
+                <div class="origin-name">Brésil — Serra do Caparaó</div>
+                <div class="origin-region">Natural Process · Minas Gerais</div>
+              </div>
+            </div>
+            <div>
+              <div class="origin-notes">Chocolat, Caramel, Noisette</div>
+              <div class="origin-bar-wrap" style="margin-top:0.3rem; justify-content:flex-end;">
+                <div class="origin-bar"><div class="origin-bar-fill" style="width:88%"></div></div>
+                <span class="origin-score">88</span>
+              </div>
+            </div>
+          </div>
+          <div class="origin-row">
+            <div class="origin-left">
+              <span class="origin-flag">🇪🇹</span>
+              <div>
+                <div class="origin-name">Éthiopie — Yirgacheffe</div>
+                <div class="origin-region">Washed · Sidama</div>
+              </div>
+            </div>
+            <div>
+              <div class="origin-notes">Fleurs blanches, Agrumes, Thé</div>
+              <div class="origin-bar-wrap" style="margin-top:0.3rem; justify-content:flex-end;">
+                <div class="origin-bar"><div class="origin-bar-fill" style="width:91%"></div></div>
+                <span class="origin-score">91</span>
+              </div>
+            </div>
+          </div>
+          <div class="origin-row">
+            <div class="origin-left">
+              <span class="origin-flag">🇨🇴</span>
+              <div>
+                <div class="origin-name">Colombie — Huila</div>
+                <div class="origin-region">Honey Process · Acevedo</div>
+              </div>
+            </div>
+            <div>
+              <div class="origin-notes">Fruits rouges, Sucre de canne</div>
+              <div class="origin-bar-wrap" style="margin-top:0.3rem; justify-content:flex-end;">
+                <div class="origin-bar"><div class="origin-bar-fill" style="width:87%"></div></div>
+                <span class="origin-score">87</span>
+              </div>
+            </div>
+          </div>
+          <div class="origin-row">
+            <div class="origin-left">
+              <span class="origin-flag">🇬🇹</span>
+              <div>
+                <div class="origin-name">Guatemala — Antigua</div>
+                <div class="origin-region">Washed · Finca Las Flores</div>
+              </div>
+            </div>
+            <div>
+              <div class="origin-notes">Praline, Épices, Cacao</div>
+              <div class="origin-bar-wrap" style="margin-top:0.3rem; justify-content:flex-end;">
+                <div class="origin-bar"><div class="origin-bar-fill" style="width:86%"></div></div>
+                <span class="origin-score">86</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="/torrefacteur-paris/" class="btn btn-green" style="margin-top:2.5rem;">Acheter en grain →</a>
+      </div>
+      <div class="botaniq-imgs">
+        <div class="botaniq-img-main">
+          <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=700&q=80" alt="Café de spécialité Paris torréfaction artisanale" width="700" height="320" loading="lazy" style="width:100%; height:320px; object-fit:cover; filter:saturate(0.75);">
+          <div class="botaniq-img-main-badge">☕ Torréfié à Paris</div>
+        </div>
+        <div class="botaniq-img-sub">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80" alt="Coffee shop Paris 2 café spécialité" width="400" height="180" loading="lazy" style="width:100%; height:180px; object-fit:cover; filter:saturate(0.75);">
+        </div>
+        <div class="botaniq-img-sub">
+          <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&q=80" alt="Intérieur coffee shop Paris Bonne Nouvelle" width="400" height="180" loading="lazy" style="width:100%; height:180px; object-fit:cover; filter:saturate(0.75);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MATCHA ═══ -->
+  <section class="matcha">
+    <div class="matcha-bg"></div>
+    <div class="container matcha-inner">
+      <div class="matcha-visual">
+        <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=700&q=80" alt="Matcha latte japonais Paris café de spécialité" width="700" height="500" loading="lazy">
+        <div class="matcha-tag-float">🍵 Grade Cérémonial</div>
+      </div>
+      <div>
+        <span class="tag">Matcha Bar</span>
+        <h2 class="display">Le Japon<br><em>à Paris 2</em></h2>
+        <p class="muted" style="margin:1.5rem 0 2rem;">Nous importons directement des régions de Uji et Nishio, au Japon, des matchas de grade cérémonial cultivés sans pesticides, récoltés à la main. La qualité que vous méritiez.</p>
+        <div class="matcha-cards">
+          <div class="matcha-card">
+            <div class="matcha-card-left">
+              <h4>Matcha Latte</h4>
+              <p>Matcha cérémonial, lait entier ou végétal · Chaud ou glacé</p>
+            </div>
+            <span class="matcha-card-price">5,50€</span>
+          </div>
+          <div class="matcha-card">
+            <div class="matcha-card-left">
+              <h4>Matcha Tozai</h4>
+              <p>Notre signature · Matcha, lait d'avoine, fleur de sel</p>
+            </div>
+            <span class="matcha-card-price">6,50€</span>
+          </div>
+          <div class="matcha-card">
+            <div class="matcha-card-left">
+              <h4>Matcha Cérémonial Pur</h4>
+              <p>Préparé en bol à la façon traditionnelle japonaise</p>
+            </div>
+            <span class="matcha-card-price">7,50€</span>
+          </div>
+          <div class="matcha-card">
+            <div class="matcha-card-left">
+              <h4>Matcha Glacé Agrumes</h4>
+              <p>Matcha, lait de coco, zeste de yuzu · Édition été</p>
+            </div>
+            <span class="matcha-card-price">6,00€</span>
+          </div>
+        </div>
+        <a href="/matcha-bar-paris/" class="btn btn-green" style="margin-top:2rem;">Le matcha bar →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ B2B ═══ -->
+  <section class="b2b">
+    <div class="container">
+      <div class="b2b-inner">
+        <div>
+          <span class="tag">Offre professionnelle</span>
+          <h2 class="display">Pour vos<br><em>établissements</em></h2>
+          <p class="muted" style="margin:1.5rem 0 2.5rem;">Restaurants, hôtels, coffee shops — nous accompagnons les professionnels de l'hospitality avec une offre café de spécialité sur mesure, de la sélection à la formation barista.</p>
+          <a href="/cafe-professionnel-paris/" class="btn btn-orange">Demander un devis →</a>
+        </div>
+        <div class="b2b-cards">
+          <div class="b2b-card b2b-card-featured">
+            <div class="b2b-card-icon">🏨</div>
+            <h4>Hôtels & Palaces</h4>
+            <p>Sélections exclusives, branding sur-mesure, formation équipes. Pour des expériences 5 étoiles.</p>
+          </div>
+          <div class="b2b-card">
+            <div class="b2b-card-icon">🍽</div>
+            <h4>Restaurants</h4>
+            <p>Cafés signature pour clôturer vos menus avec élégance. Accord mets-café disponible.</p>
+          </div>
+          <div class="b2b-card">
+            <div class="b2b-card-icon">☕</div>
+            <h4>Coffee Shops</h4>
+            <p>Devenez torréfacteur partenaire. Nos lots en exclusivité ou en co-branding.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AVIS ═══ -->
+  <section class="avis">
+    <div class="container">
+      <div class="avis-header">
+        <div>
+          <span class="tag">Témoignages</span>
+          <h2 class="display">Ce qu'ils <em>disent</em></h2>
+        </div>
+        <div class="avis-score">
+          <div class="avis-score-num">4.9</div>
+          <div class="avis-score-label">Note Google · 187 avis</div>
+        </div>
+      </div>
+      <div class="avis-grid">
+        <div class="avis-card">
+          <div class="avis-card-quote">"</div>
+          <div class="avis-stars">★★★★★</div>
+          <p class="avis-text">Le meilleur café de spécialité du 2e arrondissement. Le V60 Éthiopie est une révélation florale. L'ambiance est unique à Paris.</p>
+          <div class="avis-author">Sophie M. — Cliente régulière</div>
+        </div>
+        <div class="avis-card">
+          <div class="avis-card-quote">"</div>
+          <div class="avis-stars">★★★★★</div>
+          <p class="avis-text">Leur matcha latte est le seul à Paris qui rivalise avec ce qu'on trouve à Tokyo ou Kyoto. Qualité cérémoniale, pas de compromis.</p>
+          <div class="avis-author">Kenji T. — Gastronome</div>
+        </div>
+        <div class="avis-card">
+          <div class="avis-card-quote">"</div>
+          <div class="avis-stars">★★★★★</div>
+          <p class="avis-text">Partenaire B2B depuis 6 mois pour notre restaurant gastronomique. Le café est exceptionnel, la formation barista impeccable.</p>
+          <div class="avis-author">Marc D. — Chef, Paris 8e</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ LOCALISATION ═══ -->
+  <section class="loc">
+    <div class="loc-map">
+      <iframe
+        src="https://maps.google.com/maps?q=36+rue+de+la+Lune+75002+Paris&output=embed"
+        title="Café d'Antan — 36 rue de la Lune, 75002 Paris"
+        loading="lazy"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="loc-info">
+      <span class="tag">Nous trouver</span>
+      <h2 class="display" style="margin-bottom:2.5rem;">36 rue de la Lune<br><em>Paris 2e</em></h2>
+      <div class="loc-row">
+        <span class="loc-row-key">Adresse</span>
+        <span class="loc-row-val">36 rue de la Lune, 75002 Paris</span>
+      </div>
+      <div class="loc-row">
+        <span class="loc-row-key">Métro</span>
+        <span class="loc-row-val">Bonne Nouvelle — L8 & L9 (3 min)<br>Strasbourg-Saint-Denis — L4, L8, L9</span>
+      </div>
+      <div class="loc-row">
+        <span class="loc-row-key">Horaires</span>
+        <span class="loc-row-val">Lun–Ven : 8h00 – 18h00<br>Sam–Dim : 9h00 – 19h00</span>
+      </div>
+      <div class="loc-row">
+        <span class="loc-row-key">Contact</span>
+        <span class="loc-row-val"><a href="tel:+33100000000" style="color:var(--green);">+33 1 XX XX XX XX</a></span>
+      </div>
+      <a href="/reservation/" class="btn btn-green" style="margin-top:2.5rem;">Réserver une table →</a>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Café <span>d'Antan</span></div>
+        <p class="footer-desc">Coffee Shop · Matcha Bar · Torréfacteur artisanal. Un espace botanique et futuriste au cœur du 2e arrondissement de Paris.</p>
+        <address class="footer-addr">
+          36 rue de la Lune, 75002 Paris<br>
+          <a href="tel:+33100000000">+33 1 XX XX XX XX</a>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h4>Le café</h4>
+        <ul>
+          <li><a href="/cafe-de-specialite-paris/">Café de spécialité</a></li>
+          <li><a href="/torrefacteur-paris/">Torréfaction</a></li>
+          <li><a href="/cafe-en-grain-paris/">Café en grain</a></li>
+          <li><a href="/menu/">Notre carte</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Nos espaces</h4>
+        <ul>
+          <li><a href="/matcha-bar-paris/">Matcha Bar</a></li>
+          <li><a href="/coffee-shop-paris-2/">Coffee Shop Paris 2</a></li>
+          <li><a href="/coffee-shop-bonne-nouvelle/">Bonne Nouvelle</a></li>
+          <li><a href="/reservation/">Réservation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Professionnels</h4>
+        <ul>
+          <li><a href="/cafe-professionnel-paris/">Offre B2B</a></li>
+          <li><a href="/cafe-pour-restaurants/">Pour les restaurants</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/a-propos/">Notre histoire</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Café d'Antan — 36 rue de la Lune, 75002 Paris</span>
+      <span>
+        <a href="/mentions-legales/">Mentions légales</a>
+        &nbsp;·&nbsp;
+        <a href="/politique-confidentialite/">Confidentialité</a>
+      </span>
+    </div>
+  </footer>
+
+</body>
+</html>

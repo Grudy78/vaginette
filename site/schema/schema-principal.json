@@ -1,0 +1,223 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CafeOrCoffeeShop",
+      "@id": "https://cafedantan.com/#cafe",
+      "name": "Café d'Antan",
+      "legalName": "Café d'Antan",
+      "description": "Coffee shop, matcha bar et torréfacteur artisanal au cœur de Paris 2e. Café de spécialité torréfié sur place, matcha cérémonial japonais, pâtisseries artisanales. Fournisseur B2B pour restaurants et hôtels parisiens.",
+      "url": "https://cafedantan.com",
+      "telephone": "+33-1-XX-XX-XX-XX",
+      "email": "contact@cafedantan.com",
+      "image": [
+        "https://cafedantan.com/assets/images/cafe-dantan-facade.jpg",
+        "https://cafedantan.com/assets/images/cafe-dantan-interieur.jpg",
+        "https://cafedantan.com/assets/images/matcha-latte-cafe-dantan.jpg"
+      ],
+      "logo": "https://cafedantan.com/assets/images/logo-cafe-dantan.svg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "36 rue de la Lune",
+        "addressLocality": "Paris",
+        "addressRegion": "Île-de-France",
+        "postalCode": "75002",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.8671,
+        "longitude": 2.3504
+      },
+      "hasMap": "https://maps.google.com/?q=36+rue+de+la+Lune+75002+Paris",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "https://schema.org/Monday",
+            "https://schema.org/Tuesday",
+            "https://schema.org/Wednesday",
+            "https://schema.org/Thursday",
+            "https://schema.org/Friday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "https://schema.org/Saturday",
+            "https://schema.org/Sunday"
+          ],
+          "opens": "09:00",
+          "closes": "19:00"
+        }
+      ],
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Cash, Carte bancaire, Contactless",
+      "servesCuisine": [
+        "Café de spécialité",
+        "Matcha",
+        "Pâtisseries artisanales"
+      ],
+      "menu": "https://cafedantan.com/menu/",
+      "acceptsReservations": "True",
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "WiFi",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Prises électriques",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Terrasse",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Accès handicapé",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Options véganes",
+          "value": true
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "142",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "sameAs": [
+        "https://www.instagram.com/cafedantan",
+        "https://www.facebook.com/cafedantan",
+        "https://maps.app.goo.gl/cafedantan",
+        "https://www.tripadvisor.fr/cafedantan"
+      ],
+      "keywords": "café de spécialité Paris, matcha latte Paris, torréfacteur Paris 2, coffee shop Grands Boulevards, café en grain Paris, fournisseur café restaurant Paris",
+      "foundingDate": "2021",
+      "founder": {
+        "@type": "Person",
+        "name": "Café d'Antan"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cafedantan.com/#website",
+      "url": "https://cafedantan.com",
+      "name": "Café d'Antan",
+      "description": "Coffee shop, matcha bar et torréfacteur artisanal à Paris 2e — 36 rue de la Lune",
+      "publisher": {
+        "@id": "https://cafedantan.com/#cafe"
+      },
+      "inLanguage": "fr-FR",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://cafedantan.com/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://cafedantan.com/#organization",
+      "name": "Café d'Antan",
+      "url": "https://cafedantan.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cafedantan.com/assets/images/logo-cafe-dantan.svg",
+        "width": 400,
+        "height": 100
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+33-1-XX-XX-XX-XX",
+          "contactType": "customer service",
+          "contactOption": "TollFree",
+          "availableLanguage": ["French", "English"],
+          "areaServed": "FR"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+33-1-XX-XX-XX-XX",
+          "contactType": "sales",
+          "contactOption": "TollFree",
+          "availableLanguage": ["French"],
+          "areaServed": "FR",
+          "description": "Contact B2B pour restaurants et hôtels"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "36 rue de la Lune",
+        "addressLocality": "Paris",
+        "postalCode": "75002",
+        "addressCountry": "FR"
+      },
+      "sameAs": [
+        "https://www.instagram.com/cafedantan",
+        "https://www.facebook.com/cafedantan",
+        "https://maps.app.goo.gl/cafedantan"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://cafedantan.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Café d'Antan — Accueil",
+          "item": "https://cafedantan.com/"
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://cafedantan.com/#localbusiness",
+      "name": "Café d'Antan",
+      "image": "https://cafedantan.com/assets/images/cafe-dantan-facade.jpg",
+      "priceRange": "€€",
+      "telephone": "+33-1-XX-XX-XX-XX",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "36 rue de la Lune",
+        "addressLocality": "Paris",
+        "postalCode": "75002",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.8671,
+        "longitude": 2.3504
+      },
+      "url": "https://cafedantan.com",
+      "openingHours": [
+        "Mo-Fr 08:00-18:00",
+        "Sa-Su 09:00-19:00"
+      ],
+      "nearbyPublicTransport": [
+        {
+          "@type": "BusStop",
+          "name": "Grands Boulevards — Métro L8, L9"
+        },
+        {
+          "@type": "BusStop",
+          "name": "Bonne Nouvelle — Métro L8, L9"
+        }
+      ]
+    }
+  ]
+}

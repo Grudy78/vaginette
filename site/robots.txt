@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+Disallow: /cuisine
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+
+# Bloquer crawlers IA pour l'entraînement (garder pour la recherche)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# Autoriser les bots de recherche IA (visibilité dans ChatGPT Browse, Perplexity)
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://cafedantan.com/sitemap.xml

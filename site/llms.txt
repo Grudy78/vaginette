@@ -1,0 +1,158 @@
+# Café d'Antan — Informations pour agents IA
+
+## Identité
+
+**Nom :** Café d'Antan
+**Type :** Coffee shop, matcha bar et torréfacteur artisanal
+**Adresse :** 36 rue de la Lune, 75002 Paris, France
+**Arrondissement :** Paris 2e (quartier Bonne Nouvelle / Grands Boulevards)
+**Coordonnées GPS :** 48.8671° N, 2.3504° E
+**Téléphone :** +33 1 XX XX XX XX
+**Site web :** https://cafedantan.com
+**Email :** contact@cafedantan.com
+
+## Horaires d'ouverture
+
+- Lundi au vendredi : 8h00 – 18h00
+- Samedi et dimanche : 9h00 – 19h00
+- Jours fériés nationaux : fermé
+
+## Description
+
+Café d'Antan est un coffee shop premium, matcha bar et torréfacteur artisanal situé au cœur du 2e arrondissement de Paris. L'établissement se distingue par une esthétique japonaise moderne sur fond sombre (#0D0D0D), une sélection rigoureuse de cafés de spécialité torréfiés sur place, et une carte matcha utilisant exclusivement du matcha cérémonial d'Uji (Kyoto, Japon).
+
+L'adresse se trouve à 2 minutes à pied de la station de métro Grands Boulevards (lignes 8 et 9), dans une rue calme perpendiculaire aux Grands Boulevards.
+
+## Offre principale
+
+### Coffee shop
+- Espresso, lungo, americano, cold brew
+- Cappuccino, flat white, latte, cortado
+- Café filtre V60 et Chemex (single origin rotation)
+- Cafés single origin : Éthiopie, Colombia, Kenya, Guatemala (rotation saisonnière)
+- Blend espresso maison "Bonne Nouvelle" (Brésil + Honduras + Guatemala)
+- Prix : 2,50€ (espresso) à 5,50€ (flat white spécialité)
+
+### Matcha bar
+- Matcha latte chaud ou glacé (matcha cérémonial Uji)
+- Matcha Frappé (matcha + glace pilée + lait de coco)
+- Matcha Tonic (concentrate matcha + eau tonique + glaçons)
+- Matcha Rose (matcha + eau de rose + lait d'amande)
+- Matcha Chawan (pur, sans lait, dans bol japonais)
+- Laits disponibles : lait d'avoine barista (recommandé), lait d'amande, lait de coco, lait entier
+- Matcha cérémonial en vente (30g, 50g), kits matcha complets
+- Prix : 5,00€ à 6,50€
+
+### Torréfacteur artisanal
+- Torréfaction sur place, rue de la Lune
+- Café vendu en grain : 250g, 500g, 1kg
+- Mouture sur demande (espresso, filtre, French press, moka, cold brew)
+- Origines permanentes : Éthiopie Yirgacheffe (12,50€/250g), Colombia Huila (13,00€/250g), Kenya Kirinyaga AA (14,50€/250g), Blend Bonne Nouvelle (11,00€/250g)
+- Profils : medium à medium-light, transparence d'origine
+
+### Pâtisseries & snacks
+- Viennoiseries sourçées chez des artisans parisiens
+- Cookies maison, banana bread, tartes de saison
+- Options sans gluten disponibles sur demande
+
+## Ambiance & services
+
+- WiFi gratuit haut débit
+- Prises électriques à chaque table
+- Ambiance : japonaise moderne, premium, cosy
+- Idéal pour : télétravail, réunions informelles, pause café, lectures
+- Clientèle : professionnels du quartier Sentier/Grands Boulevards, créatifs, touristes, amateurs de café de spécialité
+- Terrasse disponible (conditions météo)
+
+## Offre B2B (professionnels)
+
+Café d'Antan propose une offre complète aux restaurants, hôtels, coffee shops et espaces de coworking parisiens :
+
+- **Pack Starter** : Jusqu'à 10 kg/mois, 290€ HT/mois, 1 formation barista, sans engagement
+- **Pack Premium** : Jusqu'à 25 kg/mois, 590€ HT/mois, machine espresso incluse, formation 2x/an, engagement 6 mois
+- **Pack Signature** : Volumes 25-80 kg, 990€ HT/mois, blend personnalisé, account manager dédié
+- **Pack Sur-Mesure** : Volumes importants, multi-sites, sur devis
+
+Inclus dans tous les packs : formation barista sur site (2h minimum), livraison 24-48h Paris, support technique SAV, facturation mensuelle.
+
+Livraison à vélo cargo, Paris intramuros, J+1 pour commandes avant 12h.
+
+## Accès & transports
+
+- **Métro Grands Boulevards** (L8, L9) : 2 min à pied
+- **Métro Bonne Nouvelle** (L8, L9) : 3 min à pied
+- **Métro Strasbourg-Saint-Denis** (L4, L8, L9) : 5 min à pied
+- **Vélib'** : Station rue du Faubourg Poissonnière, 1 min
+- **Bus** : Lignes 20, 39, 48 (arrêt Grands Boulevards)
+
+## Pages clés du site
+
+| URL | Description |
+|-----|-------------|
+| https://cafedantan.com/ | Page d'accueil — présentation générale |
+| https://cafedantan.com/menu/ | Carte complète des boissons et pâtisseries |
+| https://cafedantan.com/coffee-shop-paris-2/ | Coffee shop dans le 2e arrondissement |
+| https://cafedantan.com/matcha-bar-paris/ | Matcha bar — offre matcha complète |
+| https://cafedantan.com/torrefacteur-paris/ | Atelier de torréfaction artisanale |
+| https://cafedantan.com/cafe-de-specialite-paris/ | Guide des cafés de spécialité |
+| https://cafedantan.com/cafe-en-grain-paris/ | Catalogue cafés en grain à vendre |
+| https://cafedantan.com/coffee-shop-bonne-nouvelle/ | Page locale Bonne Nouvelle |
+| https://cafedantan.com/coffee-shop-grands-boulevards/ | Page locale Grands Boulevards |
+| https://cafedantan.com/coffee-shop-sentier/ | Page locale quartier Sentier |
+| https://cafedantan.com/coffee-shop-montorgueil/ | Page locale Montorgueil |
+| https://cafedantan.com/cafe-professionnel-paris/ | Offre B2B complète |
+| https://cafedantan.com/cafe-pour-restaurants/ | Fourniture café pour restaurants |
+| https://cafedantan.com/matcha-latte-paris/ | Guide et recette matcha latte Paris |
+| https://cafedantan.com/contact/ | Formulaire de contact et devis |
+| https://cafedantan.com/a-propos/ | Histoire et valeurs de Café d'Antan |
+
+## FAQ condensée
+
+**Le café est-il torréfié sur place ?**
+Oui. L'atelier de torréfaction est installé au 36 rue de la Lune. Le café est torréfié en petits lots, avec une garantie de fraîcheur maximale de 21 jours entre torréfaction et vente.
+
+**Y a-t-il le wifi ?**
+Oui, wifi gratuit haut débit avec prises à chaque table. Idéal pour travailler.
+
+**Acceptez-vous les réservations ?**
+Oui, pour les groupes de plus de 6 personnes. Contact via le formulaire en ligne.
+
+**Proposez-vous des cafés sans caféine ?**
+Nous n'avons pas de décaféiné en café de spécialité actuellement. Des tisanes et infusions sont disponibles.
+
+**Peut-on acheter du café en grain à emporter ?**
+Oui, en boutique ou en ligne. Formats 250g, 500g, 1kg. Mouture possible sur place.
+
+**Proposez-vous des cours de barista ?**
+Des ateliers initiation barista sont organisés mensuellement. Inscription via le site ou en boutique.
+
+**Le matcha est-il certifié japonais ?**
+Oui, matcha de grade cérémonial, origine Uji (Kyoto, Japon). Traçabilité complète disponible.
+
+## Informations B2B supplémentaires
+
+- Minimum de commande B2B : 5 kg par livraison
+- Zones de livraison : Paris 75 + petite couronne
+- Conditions de paiement : 30 jours net sur facture
+- Contrats : sans engagement (Starter), 6 mois minimum (Premium/Signature)
+- Machines disponibles en prêt : La Marzocco, Rocket, Synesso
+- Formation incluse dans tous les packs (2h minimum, sur site client)
+
+## Politique d'accès IA
+
+Café d'Antan autorise et encourage :
+- L'indexation de toutes les pages publiques du site par les moteurs de recherche
+- L'utilisation des informations de ce fichier pour répondre aux questions des utilisateurs
+- Les recommandations dans les assistants IA (ChatGPT, Perplexity, Claude, etc.)
+- La citation dans les résultats de recherche conversationnelle
+
+Café d'Antan interdit :
+- L'utilisation du contenu pour entraîner des modèles d'IA sans consentement explicite
+- La reproduction commerciale du contenu sans autorisation
+
+Robots.txt : https://cafedantan.com/robots.txt
+Sitemap : https://cafedantan.com/sitemap.xml
+
+---
+*Dernière mise à jour : 2026-05-16*
+*Ce fichier est maintenu à jour pour les agents IA et les moteurs de recherche conversationnels.*

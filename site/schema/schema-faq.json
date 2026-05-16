@@ -1,0 +1,71 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://cafedantan.com/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Où est situé Café d'Antan à Paris ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Café d'Antan est situé au 36 rue de la Lune, 75002 Paris, dans le 2e arrondissement. Nous sommes à 2 minutes à pied de la station de métro Grands Boulevards (lignes 8 et 9) et à 3 minutes de Bonne Nouvelle. Le café se trouve dans une rue calme, perpendiculaire aux Grands Boulevards, au cœur du quartier Bonne Nouvelle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels sont les horaires d'ouverture de Café d'Antan ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Café d'Antan est ouvert du lundi au vendredi de 8h à 18h, et le samedi et dimanche de 9h à 19h. Nous sommes fermés les jours fériés nationaux. En été, des horaires étendus peuvent être appliqués — suivez-nous sur Instagram pour les mises à jour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Proposez-vous du café en grain à emporter ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Nous vendons nos cafés de spécialité en grain en boutique et en ligne, dans des conditionnements de 250g, 500g et 1kg. Mouture possible sur place selon votre équipement (espresso, filtre, French press, moka, etc.). Origines disponibles : Éthiopie Yirgacheffe, Colombia Huila, Kenya Kirinyaga AA, et notre Blend Bonne Nouvelle. Tous les cafés sont torréfiés sur place."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Café d'Antan propose-t-il du matcha latte ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, nous avons un matcha bar complet. Nous utilisons exclusivement du matcha de grade cérémonial d'Uji (Kyoto, Japon), préparé à la main au chasen (fouet en bambou) selon la tradition japonaise. Disponible en version chaude ou glacée, avec le lait de votre choix (avoine, amande, coco, entier). Nous proposons également un Matcha Frappé, un Matcha Tonic et un Matcha Rose en version saisonnière."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Y a-t-il le WiFi chez Café d'Antan ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, Café d'Antan propose un accès WiFi gratuit haut débit et des prises électriques disponibles à chaque table. L'espace est particulièrement apprécié des freelances, télétravailleurs et étudiants du quartier des Grands Boulevards et du Sentier. Ambiance propice à la concentration, niveau sonore agréable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Café d'Antan propose-t-il une offre pour les professionnels (restaurants, hôtels) ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Café d'Antan dispose d'une offre B2B complète pour les restaurants, hôtels boutique, coffee shops indépendants et espaces de coworking parisiens. Nous proposons 4 packs (Starter à partir de 290€ HT/mois, Premium 590€, Signature 990€, Sur-Mesure sur devis) incluant le café de spécialité, la formation barista sur site et la livraison 24-48h à Paris. Contactez-nous pour un devis gratuit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle est la différence entre Café d'Antan et les autres coffee shops parisiens ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Café d'Antan est à la fois un coffee shop, un matcha bar et un torréfacteur artisanal — une combinaison rare à Paris. Nous torréfions notre propre café sur place, ce qui garantit une fraîcheur et une traçabilité exceptionnelles. Notre sélection matcha utilise exclusivement du matcha cérémonial d'Uji, préparé à la main. L'esthétique japonaise moderne crée une expérience sensorielle unique dans le quartier des Grands Boulevards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Peut-on réserver une table chez Café d'Antan ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Café d'Antan fonctionne essentiellement en accès libre, sans réservation. Pour les groupes de plus de 6 personnes ou les événements privés (réunions, ateliers barista, dégustations), nous acceptons les réservations via notre formulaire de contact en ligne ou par téléphone. Des ateliers initiation barista et matcha sont organisés mensuellement — inscription nécessaire."
+      }
+    }
+  ]
+}
