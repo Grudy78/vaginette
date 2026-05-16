@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café pour Restaurants Paris | Café d'Antan — Fournisseur Café de Spécialité</title>
+  <meta name="description" content="Fournisseur de café de spécialité pour restaurants à Paris. Café d'Antan propose des blends exclusifs, formation barista et livraison. Devis gratuit.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cafedantan.com/cafe-pour-restaurants/">
+  <meta property="og:title" content="Café pour Restaurants Paris | Café d'Antan — Fournisseur Café de Spécialité">
+  <meta property="og:description" content="Fournisseur de café de spécialité pour restaurants à Paris. Blends exclusifs, formation barista, livraison 24h. Devis gratuit.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cafedantan.com/cafe-pour-restaurants/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CafeOrCoffeeShop",
+        "@id": "https://cafedantan.com/#cafe",
+        "name": "Café d'Antan",
+        "description": "Coffee shop, matcha bar et torréfacteur artisanal. Fournisseur de café de spécialité pour restaurants à Paris.",
+        "url": "https://cafedantan.com",
+        "telephone": "+33-1-XX-XX-XX-XX",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "36 rue de la Lune",
+          "addressLocality": "Paris",
+          "postalCode": "75002",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 48.8671,
+          "longitude": 2.3504
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "08:00",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday","Sunday"],
+            "opens": "09:00",
+            "closes": "19:00"
+          }
+        ],
+        "priceRange": "€€"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Pourquoi le café de fin de repas est-il si important pour un restaurant ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Le café est la dernière expérience que vos clients emportent avec eux. Des études montrent que 65% des clients mécontents du café mentionnent ce point dans leurs avis en ligne. Un espresso de spécialité bien extrait valorise l'ensemble du repas et incite au retour."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Proposez-vous des blends personnalisés pour les restaurants ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui. À partir du pack Premium, nous créons avec vous un blend signature adapté à votre carte, à votre clientèle et à vos valeurs. Ce blend vous appartient et peut être servi à table avec une carte explicative de son origine."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment se passe la livraison en restaurant ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nous livrons en 24 à 48h ouvrées dans tout Paris. Les commandes passées avant 12h sont généralement livrées le lendemain matin avant votre mise en place. Livraison à vélo cargo, respectueuse de l'environnement."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Votre formation barista est-elle adaptée au personnel de salle ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolument. Nos formations sont conçues pour des profils non-spécialisés : serveurs, maîtres d'hôtel, chefs de rang. Nous nous concentrons sur les gestes essentiels pour reproduire un espresso parfait, soir après soir, sans être barista professionnel."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quel est le volume minimum pour travailler avec vous ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "5 kg par commande, sans minimum mensuel fixe sur le pack Starter. La plupart des restaurants qui nous contactent consomment entre 5 et 15 kg par mois selon leur taille et leur offre café."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0D0D0D;
+      --cream: #F5F0E8;
+      --matcha: #5C7A4E;
+      --matcha-light: #7A9E6A;
+      --matcha-dark: #3D5235;
+      --surface: #161616;
+      --surface-2: #1E1E1E;
+      --border: rgba(245,240,232,0.08);
+      --text-muted: rgba(245,240,232,0.55);
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,13,13,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+
+    .header-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo { font-family: var(--font-serif); font-size: 1.4rem; color: var(--cream); text-decoration: none; letter-spacing: 0.02em; }
+    .logo span { color: var(--matcha); }
+
+    nav { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    nav a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; padding: 6px 12px; border-radius: 6px; transition: color 0.2s, background 0.2s; }
+    nav a:hover { color: var(--cream); background: var(--border); }
+    nav a.active { color: var(--matcha-light); }
+    .nav-cta { background: var(--matcha); color: var(--cream) !important; border-radius: 8px; padding: 8px 16px !important; }
+    .nav-cta:hover { background: var(--matcha-light) !important; }
+
+    .hero {
+      padding: 96px 24px 80px;
+      background: linear-gradient(135deg, #0D0D0D 0%, #111a0f 60%, #0D0D0D 100%);
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(92,122,78,0.15);
+      border: 1px solid rgba(92,122,78,0.3);
+      color: var(--matcha-light);
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 6px 16px; border-radius: 100px; margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 700; line-height: 1.2;
+      max-width: 860px; margin: 0 auto 24px; color: var(--cream);
+    }
+    .hero h1 em { color: var(--matcha-light); font-style: italic; }
+
+    .hero-sub { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 40px; }
+
+    .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    .btn { display: inline-block; padding: 14px 28px; border-radius: 10px; font-size: 0.95rem; font-weight: 600; text-decoration: none; transition: all 0.2s; cursor: pointer; border: none; font-family: var(--font-sans); }
+    .btn-primary { background: var(--matcha); color: var(--cream); }
+    .btn-primary:hover { background: var(--matcha-light); transform: translateY(-1px); }
+    .btn-secondary { background: transparent; color: var(--cream); border: 1px solid var(--border); }
+    .btn-secondary:hover { border-color: var(--cream); background: rgba(245,240,232,0.05); }
+
+    main { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    section { padding: 80px 0; border-bottom: 1px solid var(--border); }
+    section:last-of-type { border-bottom: none; }
+
+    .section-label { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--matcha-light); margin-bottom: 16px; }
+
+    h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; line-height: 1.25; margin-bottom: 20px; color: var(--cream); }
+    h3 { font-family: var(--font-serif); font-size: 1.35rem; font-weight: 600; margin-bottom: 12px; color: var(--cream); }
+
+    p { color: var(--text-muted); margin-bottom: 16px; }
+    p strong { color: var(--cream); }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 48px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 32px; transition: border-color 0.2s, transform 0.2s; }
+    .card:hover { border-color: rgba(92,122,78,0.35); transform: translateY(-2px); }
+    .card-icon { width: 48px; height: 48px; background: rgba(92,122,78,0.12); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 1.4rem; }
+
+    .checklist { list-style: none; margin-top: 16px; }
+    .checklist li { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.95rem; color: var(--text-muted); }
+    .checklist li::before { content: "→"; color: var(--matcha-light); flex-shrink: 0; font-weight: 700; }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist li strong { color: var(--cream); }
+
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 48px; }
+    .testimonial-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 32px; }
+    .testimonial-stars { color: #F5C842; font-size: 1rem; margin-bottom: 16px; letter-spacing: 2px; }
+    .testimonial-text { font-size: 0.95rem; color: var(--text-muted); font-style: italic; margin-bottom: 20px; line-height: 1.7; }
+    .testimonial-author { display: flex; align-items: center; gap: 14px; }
+    .author-avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--matcha-dark), var(--matcha)); display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-size: 1rem; font-weight: 700; color: var(--cream); flex-shrink: 0; }
+    .author-name { font-weight: 600; font-size: 0.9rem; color: var(--cream); }
+    .author-role { font-size: 0.8rem; color: var(--text-muted); }
+
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 48px; }
+    .pricing-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 32px; transition: border-color 0.2s, transform 0.2s; position: relative; }
+    .pricing-card:hover { border-color: rgba(92,122,78,0.35); transform: translateY(-2px); }
+    .pricing-card.featured { border-color: var(--matcha); background: linear-gradient(135deg, var(--surface) 0%, rgba(92,122,78,0.08) 100%); }
+    .pricing-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--matcha); color: var(--cream); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 14px; border-radius: 100px; white-space: nowrap; }
+    .pack-name { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 600; margin-bottom: 8px; }
+    .pack-price { font-size: 1.9rem; font-weight: 700; color: var(--matcha-light); margin: 16px 0 4px; }
+    .pack-price span { font-size: 1rem; font-weight: 400; color: var(--text-muted); }
+    .pack-desc { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; }
+    .pack-features { list-style: none; }
+    .pack-features li { font-size: 0.875rem; color: var(--text-muted); padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 10px; }
+    .pack-features li::before { content: "✓"; color: var(--matcha-light); flex-shrink: 0; font-weight: 700; }
+    .pack-features li:last-child { border-bottom: none; }
+
+    .problem-box { background: var(--surface); border: 1px solid rgba(180,60,60,0.2); border-radius: 16px; padding: 40px; margin-top: 48px; }
+    .problem-box h3 { color: #E07070; }
+    .problem-list { list-style: none; margin-top: 16px; }
+    .problem-list li { display: flex; align-items: flex-start; gap: 12px; padding: 8px 0; font-size: 0.95rem; color: var(--text-muted); }
+    .problem-list li::before { content: "✗"; color: #E07070; flex-shrink: 0; font-weight: 700; }
+
+    .faq-list { margin-top: 48px; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question { width: 100%; background: none; border: none; color: var(--cream); font-family: var(--font-sans); font-size: 1rem; font-weight: 500; text-align: left; padding: 24px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .faq-question:hover { color: var(--matcha-light); }
+    .faq-arrow { width: 24px; height: 24px; border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.7rem; transition: transform 0.3s; }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); border-color: var(--matcha); }
+    .faq-answer { display: none; padding-bottom: 24px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.75; }
+    .faq-item.open .faq-answer { display: block; }
+
+    .cta-block { background: linear-gradient(135deg, rgba(92,122,78,0.12) 0%, rgba(92,122,78,0.04) 100%); border: 1px solid rgba(92,122,78,0.25); border-radius: 20px; padding: 56px 48px; text-align: center; margin-top: 48px; }
+    .cta-block h2 { margin-bottom: 16px; }
+    .cta-block p { max-width: 520px; margin: 0 auto 32px; }
+    .cta-block .btn { margin: 8px; }
+
+    footer { background: var(--surface); border-top: 1px solid var(--border); padding: 64px 24px 32px; margin-top: 80px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand .logo { font-size: 1.2rem; display: block; margin-bottom: 12px; }
+    .footer-brand p { font-size: 0.85rem; color: var(--text-muted); max-width: 240px; line-height: 1.6; margin-bottom: 8px; }
+    .footer-col h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream); margin-bottom: 16px; }
+    .footer-col a { display: block; color: var(--text-muted); text-decoration: none; font-size: 0.875rem; margin-bottom: 10px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--cream); }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: 0.8rem; color: var(--text-muted); margin: 0; }
+
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .two-col { grid-template-columns: 1fr; gap: 40px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .cta-block { padding: 40px 24px; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="https://cafedantan.com/" class="logo">Café <span>d'Antan</span></a>
+    <nav>
+      <a href="https://cafedantan.com/">Accueil</a>
+      <a href="https://cafedantan.com/menu/">Menu</a>
+      <a href="https://cafedantan.com/matcha-bar-paris/">Matcha Bar</a>
+      <a href="https://cafedantan.com/torrefacteur-paris/">Torréfacteur</a>
+      <a href="/pages/cafe-professionnel-paris.html">Professionnels</a>
+      <a href="https://cafedantan.com/contact/" class="nav-cta">Devis gratuit</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-badge">Pour les restaurants parisiens</div>
+  <h1>Fournisseur de Café pour Restaurants à Paris —<br><em>Café d'Antan</em></h1>
+  <p class="hero-sub">Le café est la dernière note de votre repas. Ne la laissez pas au hasard. Café d'Antan fournit les restaurants parisiens en café de spécialité torréfié sur place, avec formation incluse.</p>
+  <div class="hero-ctas">
+    <a href="https://cafedantan.com/contact/" class="btn btn-primary">Demander un devis gratuit</a>
+    <a href="#solution" class="btn btn-secondary">Découvrir notre solution</a>
+  </div>
+</section>
+
+<main>
+
+  <!-- PROBLÉMATIQUE -->
+  <section id="problematique">
+    <span class="section-label">Le problème</span>
+    <h2>Un mauvais café peut effacer une expérience irréprochable</h2>
+    <div class="two-col">
+      <div>
+        <p>Vous avez soigné chaque détail : la sélection des produits, la brigade en cuisine, la mise en place, le service en salle. Vos convives vivent une expérience remarquable, du premier amuse-bouche au dessert.</p>
+        <p>Puis arrive le café.</p>
+        <p>Un espresso amer, sur-extrait, à peine chaud, servi dans une tasse froide. <strong>En 60 secondes, tout le travail de la soirée peut être remis en question.</strong> Et dans un avis Google ou TripAdvisor, cette dernière déception est souvent la première chose écrite.</p>
+        <p>Ce n'est pas un problème de machine ou de budget. C'est un problème de sourcing et de formation. Des études en restauration montrent que <strong>65% des avis négatifs</strong> mentionnant le café concernent des établissements qui n'ont pas de café de spécialité dans leur offre.</p>
+      </div>
+      <div>
+        <div class="problem-box">
+          <h3>Ce que vivent trop de restaurants</h3>
+          <ul class="problem-list">
+            <li>Café industriel sans traçabilité ni fraîcheur</li>
+            <li>Personnel non formé à l'extraction espresso</li>
+            <li>Machine jamais entretenue correctement</li>
+            <li>Pas de cohérence entre les services</li>
+            <li>Aucune proposition de café de spécialité sur la carte</li>
+            <li>Livraisons aléatoires, ruptures de stock fréquentes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section id="solution">
+    <span class="section-label">Notre solution</span>
+    <h2>Café de spécialité + formation = l'équation gagnante</h2>
+    <p style="max-width:700px;">Café d'Antan propose aux restaurants une approche globale : un café exceptionnel, des équipes formées pour l'extraire correctement et une logistique sans accroc. Voici comment cela fonctionne.</p>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">🫘</div>
+        <h3>Café torréfié sur place</h3>
+        <p>Nos cafés sont torréfiés au 36 rue de la Lune, à Paris. Fraîcheur garantie : vous ne recevrez jamais un lot torréfié depuis plus de 2 semaines. Le café fraîchement torréfié se travaille mieux, offre une crema plus généreuse et des arômes plus complexes.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎯</div>
+        <h3>Blend créé pour votre carte</h3>
+        <p>Nous travaillons avec vous pour créer ou sélectionner un blend adapté à votre offre. Vous servez des desserts chocolatés ? Un blend à dominante brésilienne et hondurienne. Une cuisine légère et végétale ? Un single origin d'Éthiopie aux notes florales.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">👨‍🍳</div>
+        <h3>Formation équipe en place</h3>
+        <p>Vos serveurs et votre personnel de salle maîtrisent en 2 heures les gestes essentiels : réglage du moulin, tassage, extraction, gestion du lait. Résultat : un espresso reproductible, soir après soir, quel que soit le membre du personnel qui l'exécute.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🚀</div>
+        <h3>Livraison sans rupture</h3>
+        <p>Système de commande en ligne, livraison 24-48h à Paris, alerte stock automatique. Vous ne manquez jamais de café, même pendant les semaines chargées ou les jours fériés. Un numéro d'urgence est disponible pour les cas exceptionnels.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFRES RESTAURANTS -->
+  <section id="offres">
+    <span class="section-label">Offres restaurants</span>
+    <h2>Des formules pensées pour la restauration</h2>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pack-name">Essentiel Restaurant</div>
+        <div class="pack-price">320€ <span>/ mois HT</span></div>
+        <div class="pack-desc">Pour les bistrots et restaurants de quartier.</div>
+        <ul class="pack-features">
+          <li>8 à 12 kg café/mois</li>
+          <li>1 à 2 origines sélectionnées</li>
+          <li>Formation initiale (2h) en salle</li>
+          <li>Livraison 48h</li>
+          <li>Support email</li>
+        </ul>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="pricing-badge">Recommandé</div>
+        <div class="pack-name">Gastronomique</div>
+        <div class="pack-price">680€ <span>/ mois HT</span></div>
+        <div class="pack-desc">Pour les restaurants gastronomiques et tables étoilées.</div>
+        <ul class="pack-features">
+          <li>15 à 30 kg café/mois</li>
+          <li>Blend signature personnalisé</li>
+          <li>Formation complète équipe + suivi</li>
+          <li>Livraison prioritaire 24h</li>
+          <li>Carte café incluse (design fourni)</li>
+          <li>Machine entretenue par nos soins</li>
+        </ul>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pack-name">Groupe &amp; Multi-sites</div>
+        <div class="pack-price">Sur devis</div>
+        <div class="pack-desc">Pour les groupes de restauration et enseignes multiples.</div>
+        <ul class="pack-features">
+          <li>Volumes multi-sites consolidés</li>
+          <li>Blend unique groupe ou par site</li>
+          <li>Programme formation centralisé</li>
+          <li>Facturation groupe</li>
+          <li>Account manager dédié</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TÉMOIGNAGES -->
+  <section id="temoignages">
+    <span class="section-label">Témoignages</span>
+    <h2>Ce que disent nos clients restaurateurs</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">« Depuis qu'on travaille avec Café d'Antan, le café est devenu un sujet de conversation à table. Les clients demandent d'où il vient, ils le commandent en grain pour chez eux. C'est devenu un vrai plus pour notre image. »</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div>
+            <div class="author-name">Amélie Fontaine</div>
+            <div class="author-role">Cheffe — Restaurant Ombres Claires, Paris 6</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">« La formation qu'ils ont donnée à mon équipe a tout changé. En deux heures, mes serveurs savaient extraire un espresso parfait. Plus jamais de café rendu ou de client mécontent sur ce point. »</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">R</div>
+          <div>
+            <div class="author-name">Romain Chabert</div>
+            <div class="author-role">Propriétaire — Bistrot Sainte-Croix, Paris 4</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">« Le blend qu'ils ont créé pour nous est parfait avec notre menu dégustation. Nos clients Michelin sont sensibles à cette cohérence entre la cuisine et le café. Un détail qui compte. »</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">N</div>
+          <div>
+            <div class="author-name">Nicolas Delvaux</div>
+            <div class="author-role">Directeur F&amp;B — Table Noire, Paris 8</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <span class="section-label">FAQ Restaurants</span>
+    <h2>Questions fréquentes</h2>
+    <div class="faq-list">
+
+      <div class="faq-item open">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Pourquoi le café de fin de repas est-il si important pour un restaurant ?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          Le café est la <strong>dernière expérience sensorielle</strong> que vos clients emportent avec eux. Des études en neuromarketing montrent que les derniers moments d'une expérience ont un poids disproportionné dans le souvenir global. Un espresso de spécialité bien extrait valorise l'ensemble du repas et incite au retour. À l'inverse, un café décevant peut créer un sentiment de déception qui efface les émotions positives accumulées pendant le repas.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Proposez-vous des blends personnalisés pour les restaurants ?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          Oui. À partir du pack Gastronomique, nous créons avec vous un <strong>blend signature adapté à votre carte</strong>, à votre clientèle et à vos valeurs. Nous commençons par une dégustation d'orientation avec votre chef ou directeur F&B, puis nous assemblons plusieurs lots jusqu'à trouver le profil parfait. Ce blend peut être commercialisé sous votre nom, avec une carte d'origine sur table.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Comment se passe la livraison en restaurant ?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          Nous livrons en <strong>24 à 48h ouvrées</strong> dans tout Paris. Les commandes passées avant 12h sont généralement livrées le lendemain matin avant votre mise en place. Nos livreurs à vélo cargo s'adaptent aux contraintes d'accès de votre établissement. Un système d'alerte de stock automatique vous notifie quand vous approchez du seuil critique.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Votre formation barista est-elle adaptée au personnel de salle non-spécialisé ?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          Absolument. Nos formations sont conçues pour des profils non-spécialisés : serveurs, maîtres d'hôtel, chefs de rang. En 2 heures, vos équipes maîtrisent les gestes essentiels pour extraire un espresso parfait et préparer des boissons à base de lait. Nous nous concentrons sur le <strong>geste reproductible</strong>, pas sur la théorie du barista champion — parce que c'est ce dont vous avez besoin pour un service de restaurant efficace.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Quel est le volume minimum pour travailler avec vous ?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-answer">
+          Notre minimum est de <strong>5 kg par commande</strong>. Pour les restaurants, la consommation mensuelle moyenne varie de 8 kg pour un petit bistrot à plus de 40 kg pour un grand restaurant. Nous analysons avec vous votre consommation réelle lors de la première consultation pour vous proposer la formule la plus adaptée à votre volume.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-block">
+    <h2>Prêt à transformer votre offre café ?</h2>
+    <p>Demandez un devis gratuit et sans engagement. Nous vous recontactons sous 24h pour organiser une dégustation dans votre établissement.</p>
+    <a href="https://cafedantan.com/contact/" class="btn btn-primary">Demander un devis gratuit</a>
+    <a href="/pages/cafe-professionnel-paris.html" class="btn btn-secondary">Voir toute l'offre B2B</a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="https://cafedantan.com/" class="logo">Café <span>d'Antan</span></a>
+        <p>Coffee shop, matcha bar et torréfacteur artisanal. 36 rue de la Lune, 75002 Paris.</p>
+        <p>Lun–Ven : 8h–18h • Sam–Dim : 9h–19h</p>
+      </div>
+      <div class="footer-col">
+        <h4>Le café</h4>
+        <a href="https://cafedantan.com/coffee-shop-paris-2/">Coffee Shop Paris 2</a>
+        <a href="https://cafedantan.com/matcha-bar-paris/">Matcha Bar</a>
+        <a href="https://cafedantan.com/torrefacteur-paris/">Torréfacteur</a>
+        <a href="https://cafedantan.com/menu/">Notre menu</a>
+      </div>
+      <div class="footer-col">
+        <h4>Pages locales</h4>
+        <a href="/pages/coffee-shop-grands-boulevards.html">Grands Boulevards</a>
+        <a href="https://cafedantan.com/coffee-shop-bonne-nouvelle/">Bonne Nouvelle</a>
+        <a href="https://cafedantan.com/coffee-shop-sentier/">Sentier</a>
+        <a href="https://cafedantan.com/coffee-shop-montorgueil/">Montorgueil</a>
+      </div>
+      <div class="footer-col">
+        <h4>Professionnels</h4>
+        <a href="/pages/cafe-professionnel-paris.html">Offre B2B</a>
+        <a href="/pages/cafe-pour-restaurants.html">Pour les restaurants</a>
+        <a href="/pages/cafe-en-grain-paris.html">Café en grain</a>
+        <a href="https://cafedantan.com/contact/">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Café d'Antan — 36 rue de la Lune, 75002 Paris</p>
+      <p>Mentions légales • Politique de confidentialité</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
